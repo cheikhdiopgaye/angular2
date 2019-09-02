@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,6 +12,7 @@ import { SupAdminComponent } from './sup-admin/sup-admin.component';
 import { Accueil1Component } from './accueil1/accueil1.component';
 import { AddPartComponent } from './add-part/add-part.component';
 import { FooterComponent } from './footer/footer.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,15 @@ import { FooterComponent } from './footer/footer.component';
     SupAdminComponent,
     Accueil1Component,
     AddPartComponent,
-    FooterComponent
+    FooterComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

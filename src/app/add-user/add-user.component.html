@@ -1,0 +1,57 @@
+
+          <div class="userf">
+            <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <div class="panel panel-default">
+                  <div class="panel-heading">Nouveau prestataire</div>
+                    <div class="panel-body">
+                      <form #imageForm= "ngForm">
+                        <div class="row">
+                          <div class="col-md-6 float-left">
+                        
+                              <div class="form-group">
+                                  <label  class="control-label">Username</label>
+                                  <input [(ngModel)]= "addUserData.username" name="username" type="text"  class="form-control rounded-0" required >
+                              </div>
+                              <div class="form-group">
+                                  <label  class="control-label">Mot de passe</label>
+                                  <input [(ngModel)]= "addUserData.plainPassword" name="plainPassword" type="password"  class="form-control rounded-0" required >
+                              </div>
+                              <div class="form-group">
+                                  <label  class="control-label">Nom</label>
+                                  <input [(ngModel)]= "addUserData.Nom" name="nom" type="text"  class="form-control rounded-0" required >
+                              </div>
+                              <div class="form-group">
+                                  <label  class="control-label">Prénom</label>
+                                  <input [(ngModel)]= "addUserData.prenom" name="prenom" type="text"  class="form-control rounded-0" required >
+                              </div>
+                              <div class="form-group">
+                                  <label  class="control-label">Numéro de téléphone</label>
+                                  <input type="number" [(ngModel)]= "addUserData.telephone" name="telephone"   class="form-control rounded-0" required >
+                              </div>
+                              <div class="form-group">
+                                  <label  class="control-label">Adresse</label>
+                                  <input [(ngModel)]= "addUserData.adresse" name="adresse" type="text"  class="form-control rounded-0" required >
+                              </div>
+                              
+                              <div class="form-group">
+                                  <label  class="control-label">Adresse email</label>
+                                  <input [(ngModel)]= "addUserData.email" name="email" type="email"  class="form-control rounded-0" required >
+                              </div>
+                      </div>
+                      <div class="col-md-6 images" >
+                              <div class="form-group">
+                                  <img [src]="imageUrl" style="width: 250px;height:200px">
+                                  <input   (change)="handleFileInput($event.target.files)" #image accept="images/*" [(ngModel)]= "addUserData.imageFile" name="imageFile" type="file" class="form-control rounded-0" required>
+                                </div>
+                      </div>
+                    </div>
+                      <button (click)="addUser()"  class="btn btn-success" type="submit" >Enregistrer</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              <div class="col-md-2"></div>
+          </div>
+       
+

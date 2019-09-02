@@ -1,4 +1,6 @@
+import { AddPartenaireService } from '../services/add-partenaire.service';
 import { Component, OnInit } from '@angular/core';
+import { ReadVarExpr } from '@angular/compiler';
 
 @Component({
   selector: 'app-add-part',
@@ -6,14 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-part.component.css']
 })
 export class AddPartComponent implements OnInit {
-
-  constructor() { }
+  addPartData = {imageFile :File=null};
+  imageUrl:string ="/assets/img/index.png";
+  fileToUpload : File= null;
+  constructor(private addpartService: AddPartenaireService ) { }
 
   ngOnInit() {
   }
 
-  onSavePart(data){
-    console.log(data);
+
+  handleFileInput(file: FileList){
+    this.addPartData.imageFile= file.item(0);
+    var reader= new FileReader();
+
+    reader.onload= (event: any) => {
+      this.imageUrl = event.target.result;
+    }
+    reader.readAsDataURL(this.addPartData.imageFile);
+  }
+  addPartenaire(){
+    this.addpartService.addPartenaire(this.addPartData)
+    .subscribe(
+      res => console.log(res),
+      err => console.log(err)
+    )
   }
 
 }
