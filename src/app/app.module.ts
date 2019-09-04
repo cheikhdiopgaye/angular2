@@ -13,6 +13,11 @@ import { Accueil1Component } from './accueil1/accueil1.component';
 import { AddPartComponent } from './add-part/add-part.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule, MatTableModule} from '@angular/material';
+import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
+import { DepotComponent } from './depot/depot.component';
+import { ListedepotsComponent } from './listedepots/listedepots.component'
 
 @NgModule({
   declarations: [
@@ -24,14 +29,20 @@ import { AddUserComponent } from './add-user/add-user.component';
     Accueil1Component,
     AddPartComponent,
     FooterComponent,
-    AddUserComponent
+    AddUserComponent,
+    UtilisateursComponent,
+    DepotComponent,
+    ListedepotsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatTableModule
 
   ],
   providers: [],

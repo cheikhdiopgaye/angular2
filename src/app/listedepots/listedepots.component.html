@@ -1,0 +1,40 @@
+<section class="tables">
+
+  <div class="card">
+    <div class="card-close">
+      <div class="dropdown">
+        <button type="button" id="closeCard1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+        <div aria-labelledby="closeCard1" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
+      </div>
+    </div>
+    <div class="card-header d-flex align-items-center">
+      <h3 class="h4">Liste des depôts</h3>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID Compte banquaire</th>
+              <th scope="col">Montant (FCFA)</th>
+              <th scope="col">Date de dépôt</th>
+              <th scope="col">Plus de detail</th>
+              <th scope="col">Modifier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dep of depots" >
+              <td>{{dep.comptb}}</td>
+              <td>{{dep.montant}}</td>
+              <td>{{dep.dateDepot}}</td>
+              <td><a href="" class="btn btn-info">Plus d'infos</a> </td>
+              <td><a href="" class="btn btn-success">Modifier</a> </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+
+</section>
+

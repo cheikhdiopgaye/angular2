@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AddPartenaireService } from '../services/add-partenaire.service';
 import { Component, OnInit } from '@angular/core';
 import { ReadVarExpr } from '@angular/compiler';
@@ -9,9 +10,9 @@ import { ReadVarExpr } from '@angular/compiler';
 })
 export class AddPartComponent implements OnInit {
   addPartData = {imageFile :File=null};
-  imageUrl:string ="/assets/img/index.png";
+  imageUrl:string ="/assets/imgch/hom.jpeg";
   fileToUpload : File= null;
-  constructor(private addpartService: AddPartenaireService ) { }
+  constructor(private addpartService: AddPartenaireService, private router: Router ) { }
 
   ngOnInit() {
   }
@@ -29,7 +30,9 @@ export class AddPartComponent implements OnInit {
   addPartenaire(){
     this.addpartService.addPartenaire(this.addPartData)
     .subscribe(
-      res => console.log(res),
+      res => {console.log(res)
+        this.router.navigateByUrl("/Entreprise");
+      },
       err => console.log(err)
     )
   }

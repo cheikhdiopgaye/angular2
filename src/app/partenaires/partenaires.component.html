@@ -1,61 +1,46 @@
 
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box">
-              <div class="box-header">
-                <h3 class="box-title">Liste des partenaires</h3>
-              </div>
-              <!-- /.box-header -->
-              <div class="box-body">
-                <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
-                  <thead class="btable">
-                  <tr>
-                    <th scope="col">Raison social</th>
-                    <th scope="col">Ninéa</th>
-                    <th scope="col">Adresse</th>
-                    <th scope="col">Téléphone</th>
-                    <th scope="col">Etat</th>
-                    <th scope="col">Plus de detail</th>
-                    <th scope="col">Modifier</th>
+    <section class="tables">
 
-                  </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let part of partenaires" >
-                      <td>{{part.raisonSocial}}</td>
-                      <td>{{part.ninea}}</td>
-                      <td>{{part.adress}}</td>
-                      <td>{{part.telephon}}</td>
-                      <td>{{part.etats}}</td>
-                      <td><a href="" class="btn btn-info">Plus d'infos</a> </td>
-                        <td><a href="" class="btn btn-success">Modifier</a> </td>
-
-                  </tr>
-                  </tbody>
-                </table>
+            <div class="card">
+              <div class="card-close">
+                <div class="dropdown">
+                  <button type="button" id="closeCard1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                  <div aria-labelledby="closeCard1" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
+                </div>
               </div>
-              <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
-          </div>
+              <div class="card-header d-flex align-items-center">
+                <h3 class="h4">Liste des partenaires</h3>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Raison social</th>
+                        <th scope="col">Ninéa</th>
+                        <th scope="col">Adresse</th>
+                        <th scope="col">Téléphone</th>
+                        <th scope="col">Etat</th>
+                        <th scope="col">Plus de detail</th>
+                        <th scope="col">Modifier</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let part of partenaires" >
+                        <td>{{part.raisonSocial}}</td>
+                        <td>{{part.ninea}}</td>
+                        <td>{{part.adress}}</td>
+                        <td>{{part.telephon}}</td>
+                        <td>{{part.etats}}</td>
+                        <td><a href="" class="btn btn-info">Plus d'infos</a> </td>
+                          <td><a href="" class="btn btn-success">Modifier</a> </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
         </div>
-        <script>
-                  // Material Design example
-        $(document).ready(function () {
-        $('#dtMaterialDesignExample').DataTable();
-        $('#dtMaterialDesignExample_wrapper').find('label').each(function () {
-        $(this).parent().append($(this).children());
-        });
-        $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('input').each(function () {
-        $('input').attr("placeholder", "Search");
-        $('input').removeClass('form-control-sm');
-        });
-        $('#dtMaterialDesignExample_wrapper .dataTables_length').addClass('d-flex flex-row');
-        $('#dtMaterialDesignExample_wrapper .dataTables_filter').addClass('md-form');
-        $('#dtMaterialDesignExample_wrapper select').removeClass(
-        'custom-select custom-select-sm form-control form-control-sm');
-        $('#dtMaterialDesignExample_wrapper select').addClass('mdb-select');
-        $('#dtMaterialDesignExample_wrapper .mdb-select').materialSelect();
-        $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
-        });
-        </script>
+
+    </section>
+   
+

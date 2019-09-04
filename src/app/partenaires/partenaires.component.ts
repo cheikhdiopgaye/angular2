@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { PartenaireService } from '../services/partenaire.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-partenaires',
   templateUrl: './partenaires.component.html',
