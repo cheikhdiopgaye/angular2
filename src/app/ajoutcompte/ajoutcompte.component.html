@@ -1,0 +1,38 @@
+<section class="forms">
+  <div class="container-fluid">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-close">
+            <div class="dropdown">
+              <button type="button" id="closeCard5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+              <div aria-labelledby="closeCard5" class="dropdown-menu dropdown-menu-right has-shadow"></div>
+            </div>
+            </div>
+            <div class="card-header d-flex align-items-center">
+              <h3 class="h4">Nouveau compte bancaire</h3>
+            </div>
+
+            <div class="card-body">
+                <div class= "iconcompte">
+                    <img src="assets/imgch/compte.jpg" alt="..." class="imgcompte">
+                  </div>
+              <form class="form-horizontal"  #f = "ngForm">
+                <div class="form-group-material ">
+                    <input [(ngModel)]= "addCompteData.comptb" name="comptb" id="comptb" type="text" required class="input-material">
+                    <label for="comptb" class="label-material">Prestataire</label>
+                </div>
+                <div class="row">
+                    <div class="col-1">
+                      <button class="subbutton" (click)="addCompte()"  class="btn btn-primary" type="submit" >Save</button>
+                    </div>
+                    <div class="col-1">
+                      <button class="anbutton" (click)="annuler()"  class="btn btn-danger" type="submit" >Annuler</button>
+                    </div>
+                    <div class="col-10"></div>
+                </div>
+              </form>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>

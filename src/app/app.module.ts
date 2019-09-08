@@ -17,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatTableModule} from '@angular/material';
 import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
 import { DepotComponent } from './depot/depot.component';
-import { ListedepotsComponent } from './listedepots/listedepots.component'
+import { ListedepotsComponent } from './listedepots/listedepots.component';
+import { AjoutcompteComponent } from './ajoutcompte/ajoutcompte.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ListedepotsComponent } from './listedepots/listedepots.component'
     AddUserComponent,
     UtilisateursComponent,
     DepotComponent,
-    ListedepotsComponent
+    ListedepotsComponent,
+    AjoutcompteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,103 @@
-<p>utilisateurs works!</p>
+
+
+
+    <section class="forms">
+        <div class="container-fluid">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-close">
+                  <div class="dropdown">
+                    <button type="button" id="closeCard5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                    <div aria-labelledby="closeCard5" class="dropdown-menu dropdown-menu-right has-shadow"></div>
+                  </div>
+                </div>
+                <div class="card-header d-flex align-items-center">
+                  <h3 class="h4">Nouveau utilisateur</h3>
+                </div>
+                <div class="card-body">
+                  <form class="form-horizontal"  #imageForm= "ngForm">
+                    <div class= "row">
+                    <div  class= "col-8">
+                        <div class="form-group row">
+                            <label class="col-sm-3 form-control-label">Select</label>
+                            <div class="col-sm-9">
+                              <select name="partenaire" class="form-control mb-3">
+                                <option *ngFor = "let  roles of roles" selected="selected" [value] = "roles"></option>
+                              </select>
+                            </div>
+                          </div>
+                        <div class="form-group-material ">
+                          <input id="partenaire" type="text" [(ngModel)]= "addUtilisateurData.partenaire" name="partenaire" required class="input-material">
+                            <label for="partenaire" class="label-material">Entreprise</label> 
+                          </div>
+                    <div class= "row">
+                      <div class= "col-6">
+                        <div class="form-group-material ">
+
+                          <input id="nom" type="text" [(ngModel)]= "addUtilisateurData.Nom" name="nom" required class="input-material">
+                          <label for="nom" class="label-material">Nom</label>
+                        </div>
+                      </div>
+                      <div class= "col-6">
+                      <div class="form-group-material ">
+                        <input id="prenom" type="text" [(ngModel)]= "addUtilisateurData.prenom" name="prenom" required class="input-material">
+                        <label for="prenom" class="label-material">Prénom</label>
+                      </div>
+                      </div>
+                    </div>
+
+                    <div class= "row">
+                      <div class= "col-6">
+                        <div class="form-group-material">
+                          <input id="adresse" type="text" [(ngModel)]= "addUtilisateurData.adresse" name="adresse" required class="input-material">
+                          <label for="adresse" class="label-material">Adresse</label>
+                        </div>
+                    </div>
+
+                    <div class= "col-6">
+                        <div class="form-group-material">
+                          <input id="telephone" type="number" [(ngModel)]= "addUtilisateur.telephone" name="telephone" required class="input-material">
+                          <label for="telephone" class="label-material">Numéro téléphone</label>
+                        </div>
+                    </div>
+                  </div>
+                  <div class= "row">
+                      <div class= "col-6">
+                        <div class="form-group-material">
+                            <input id="email" type="email" [(ngModel)]= "addUtilisateurData.email"  name="email" required class="input-material">
+                            <label for="email" class="label-material">Adresse email</label>
+                        </div>
+                      </div>
+                      <div class= "col-6">
+                        <div class="form-group-material">
+                            <input id="username" type="text"  [(ngModel)]= "addUtilisateurData.username"  name="username" required class="input-material">
+                            <label for="username" class="label-material">Nom d'utilisateur</label>
+                        </div>
+                      </div>
+                  </div>
+                      <div class="form-group-material">
+                          <input id="plainPassword" type="password" [(ngModel)]= "addUtilisateurData.plainPassword" name="plainPassword" required class="input-material">
+                          <label for="plainPassword" class="label-material">Mot de passe</label>
+                      </div>
+
+              </div>
+              <div class= "col-4">
+                  <div class="form-group">
+                      <img [src]="imageUrl" class="tof" >
+                      <input   (change)="handleFileInput($event.target.files)" #image accept="images/*" [(ngModel)]= "addUtilisateurData.imageFile" name="imageFile" type="file" class=" rounded-0" required>
+                  </div>
+              </div>
+            </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                      <div class="col-sm-4 offset-sm-3">
+                        <button type="submit" class="btn btn-secondary">Cancel</button>
+                        <button (click)="addUtilisateur()"  class="btn btn-primary" type="submit" >Save</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>

@@ -53,6 +53,11 @@
                         <input id="plainPassword" type="password" [(ngModel)]= "addUserData.plainPassword" name="plainPassword" required class="input-material">
                         <label for="plainPassword" class="label-material">Mot de passe</label>
                     </div>
+                    <select  [(ngModel)]= "addUserData.profil"  name="profil"   >
+                        <option *ngFor = "let  profil of profil" selected="selected" required class="input-material" [value] = "profil">{{profil}}</option>
+                        
+          
+                      </select>
             </div>
             <div class= "col-4">
                 <div class="form-group">

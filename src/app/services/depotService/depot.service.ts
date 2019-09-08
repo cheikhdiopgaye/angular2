@@ -11,7 +11,7 @@ export class DepotService {
   constructor(private http: HttpClient, private authService: AthenticationService) { }
   depot(data) {
     var headers= new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem('token'));
-    const depotUrl = "http://localhost:8000/depot";
+    const depotUrl = "http://localhost:8000/apii/depot";
 
     return this.http.post(depotUrl, {headers:headers})
   }

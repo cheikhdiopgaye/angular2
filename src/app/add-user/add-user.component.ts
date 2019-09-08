@@ -10,6 +10,7 @@ import { AddUserService } from './../services/addUserService/add-user.service';
 })
 export class AddUserComponent implements OnInit {
   addUserData = {imageFile :File=null};
+  profil= ['admin', 'user', 'caissier']
   imageUrl:string ="/assets/imgch/hom.jpeg";
   fileToUpload : File= null;
   constructor(private addUserService: AddUserService) { }

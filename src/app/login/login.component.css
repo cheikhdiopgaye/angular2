@@ -5,3 +5,12 @@ width:500px;
 .panel-heading{
   background-color: #CFD8DC;
 }
+.img-fluid{
+  margin-left:20px;
+}
+.logo{
+  margin-left: 40%;
+}
+.login-page{
+  margin-left:50px;
+}

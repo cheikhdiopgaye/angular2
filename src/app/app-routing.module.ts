@@ -8,6 +8,7 @@ import { AddPartComponent } from './add-part/add-part.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
 import { DepotComponent } from './depot/depot.component';
+import { AjoutcompteComponent } from './ajoutcompte/ajoutcompte.component';
 
 
 const routes: Routes = [
@@ -32,7 +33,9 @@ const routes: Routes = [
   {path:'accueil1', component: Accueil1Component},
   {path: 'listeUser', component: UtilisateursComponent},
   {path: 'depot', component: DepotComponent},
-  {path: 'listedepots', component: ListedepotsComponent}
+  {path: 'listedepots', component: ListedepotsComponent},
+  {path:'compte', component: AjoutcompteComponent},
+  {path: 'addUtilisateur', component: UtilisateursComponent}
 
 
 
