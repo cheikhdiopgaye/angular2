@@ -9,6 +9,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
 import { DepotComponent } from './depot/depot.component';
 import { AjoutcompteComponent } from './ajoutcompte/ajoutcompte.component';
+import { EnvoieComponent } from './envoie/envoie.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
   {path: 'depot', component: DepotComponent},
   {path: 'listedepots', component: ListedepotsComponent},
   {path:'compte', component: AjoutcompteComponent},
-  {path: 'addUtilisateur', component: UtilisateursComponent}
+  {path: 'addUtilisateur', component: UtilisateursComponent},
+  {path: 'envoie', component: EnvoieComponent}
 
 
 

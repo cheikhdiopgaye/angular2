@@ -11,9 +11,9 @@ export class DepotService {
   constructor(private http: HttpClient, private authService: AthenticationService) { }
   depot(data) {
     var headers= new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem('token'));
-    const depotUrl = "http://localhost:8000/apii/depot";
+    const depotsUrl = "http://localhost:8000/api/depot";
 
-    return this.http.post(depotUrl, {headers:headers})
+    return this.http.post(depotsUrl, data, {headers:headers})
   }
 
   getDepots() :Observable<any> {

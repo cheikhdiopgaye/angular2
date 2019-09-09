@@ -39,26 +39,25 @@
         </div>
         <!-- Sidebar Navidation Menus-->
         <ul class="list-unstyled">
-          <li class="active"><a href="#"> <i class="icon-home"></i>Home </a></li>
+          <li class="active"><a [routerLink]="['/']" routerLinkActive="router-link-active" > <i class="icon-home"></i>Home </a></li>
           <li *ngIf="isSuperAdmin()" ><a [routerLink]="['/Entreprise']" routerLinkActive="router-link-active" > <i class="icon-grid"></i>Liste des partenaires</a></li>
           <li *ngIf="isSuperAdmin()"><a href=""> <i class="icon-grid"></i>Liste des utilisateur</a></li>
           <li *ngIf="isCaissier()" ><a [routerLink]="['/listedepots']" routerLinkActive="router-link-active" > <i class="icon-padnote"></i>Listes dépôts  </a></li>
           <li  *ngIf="isUtilisateur() || isAdminPart()" ><a [routerLink]="['/']" routerLinkActive="router-link-active" > <i class="icon-grid"></i>Liste des transferts</a></li>
           <li  *ngIf="isUtilisateur() || isAdminPart()" ><a [routerLink]="['/']" routerLinkActive="router-link-active" > <i class="icon-grid"></i>Liste des retraîts</a></li>
 
-          <li  *ngIf="isUtilisateur()" ><a [routerLink]="['/']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Envoie</a></li>
+          <li  *ngIf="isUtilisateur()" ><a [routerLink]="['/envoie']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Envoie</a></li>
           <li  *ngIf="isUtilisateur()" ><a [routerLink]="['/']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Retraît</a></li>
           <li  *ngIf="isSuperAdmin()" ><a [routerLink]="['/addPartenaire']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Nouveau partenaire</a></li>
-          <li  *ngIf="isSuperAdmin() || isAdminPart()" ><a [routerLink]="['/addUser']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Nouveau utilisateur</a></li>
-          
-            <li  *ngIf="isSuperAdmin()" ><a [routerLink]="['/compte']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Nouveau compte</a></li> 
-            <li *ngIf="isCaissier()" ><a [routerLink]="['/compte']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Nouveau depôt</a></li> 
-            
-          
-          <li *ngIf="isCaissier()"><a [routerLink]="['/depot']"> <i class="icon-interface-windows"></i>Dépôt</a></li>
+          <li  *ngIf="isSuperAdmin()" ><a [routerLink]="['/addUser']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Nouveau Caissier</a></li>
+          <li  *ngIf="isAdminPart()" ><a [routerLink]="['/addUtilisateur']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Nouveau Utilisateur</a></li>
+
+            <li  *ngIf="isSuperAdmin()" ><a [routerLink]="['/compte']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Nouveau compte</a></li>
+            <li *ngIf="isCaissier()" ><a [routerLink]="['/depot']" routerLinkActive="router-link-active" > <i class="icon-interface-windows"></i>Nouveau depôt</a></li>
+
         </ul><span class="heading"></span>
-       
-      
+
+
       </nav>
       <div class="content-inner" >
         <!-- Page Header-->
@@ -68,7 +67,7 @@
           </div>
         </header>
 
-        <!-- Updates Section                                                -->
+        <!-- Updates Section-->
         <section class="updates no-padding-top">
           <div class="container-fluid">
             <router-outlet></router-outlet>

@@ -22,42 +22,53 @@
                   <div class= "row">
 
                   <div  class= "col-8">
-                      <div class="form-group-material ">
-                        <input id="nom" type="text" [(ngModel)]= "addUserData.Nom" name="nom" required class="input-material">
-                        <label for="nom" class="label-material">Nom</label>
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="form-group-material ">
+                          <input id="nom" type="text" [(ngModel)]= "addUserData.Nom" name="nom" required class="input-material">
+                          <label for="nom" class="label-material">Nom</label>
+                        </div>
                       </div>
-
-
-                    <div class="form-group-material ">
-                      <input id="prenom" type="text" [(ngModel)]= "addUserData.prenom" name="prenom" required class="input-material">
-                      <label for="prenom" class="label-material">Prénom</label>
-                    </div>
-
-                  <div class="form-group-material">
-                    <input id="adresse" type="text" [(ngModel)]= "addUserData.adresse" name="adresse" required class="input-material">
-                    <label for="adresse" class="label-material">Adresse</label>
+                      <div class="col-6">
+                        <div class="form-group-material ">
+                          <input id="prenom" type="text" [(ngModel)]= "addUserData.prenom" name="prenom" required class="input-material">
+                          <label for="prenom" class="label-material">Prénom</label>
+                        </div>
+                      </div>
                   </div>
-                  <div class="form-group-material">
-                      <input id="telephone" type="number" [(ngModel)]= "addUserData.telephone" name="telephone" required class="input-material">
-                      <label for="telephone" class="label-material">Numéro téléphone</label>
+                  <div class="row">
+                      <div class="col-6">
+                        <div class="form-group-material">
+                          <input id="adresse" type="text" [(ngModel)]= "addUserData.adresse" name="adresse" required class="input-material">
+                          <label for="adresse" class="label-material">Adresse</label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-group-material">
+                          <input id="telephone" type="number" [(ngModel)]= "addUserData.telephone" name="telephone" required class="input-material">
+                          <label for="telephone" class="label-material">Numéro téléphone</label>
+                        </div>
+                      </div>
                     </div>
-                    <div class="form-group-material">
-                        <input id="email" type="email"  name="email" required class="input-material">
-                        <label for="email" class="label-material">Adresse email</label>
+                    <div class="row">
+                        <div class="col-6">
+                          <div class="form-group-material">
+                              <input id="email" type="email"  name="email" required class="input-material">
+                              <label for="email" class="label-material">Adresse email</label>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group-material">
+                              <input id="username" type="text"  [(ngModel)]= "addUserData.username"  name="username" required class="input-material">
+                              <label for="username" class="label-material">Nom d'utilisateur</label>
+                          </div>
+                        </div>
                     </div>
-                    <div class="form-group-material">
-                        <input id="username" type="text"  [(ngModel)]= "addUserData.username"  name="username" required class="input-material">
-                        <label for="username" class="label-material">Nom d'utilisateur</label>
-                    </div>
+
                     <div class="form-group-material">
                         <input id="plainPassword" type="password" [(ngModel)]= "addUserData.plainPassword" name="plainPassword" required class="input-material">
                         <label for="plainPassword" class="label-material">Mot de passe</label>
                     </div>
-                    <select  [(ngModel)]= "addUserData.profil"  name="profil"   >
-                        <option *ngFor = "let  profil of profil" selected="selected" required class="input-material" [value] = "profil">{{profil}}</option>
-                        
-          
-                      </select>
             </div>
             <div class= "col-4">
                 <div class="form-group">
@@ -66,7 +77,7 @@
                 </div>
             </div>
           </div>
-                  <div class="line"></div>
+                 
                   <div class="form-group row">
                     <div class="col-sm-4 offset-sm-3">
                       <button type="submit" class="btn btn-secondary">Cancel</button>

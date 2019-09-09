@@ -18,7 +18,8 @@ import {MatButtonModule, MatTableModule} from '@angular/material';
 import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
 import { DepotComponent } from './depot/depot.component';
 import { ListedepotsComponent } from './listedepots/listedepots.component';
-import { AjoutcompteComponent } from './ajoutcompte/ajoutcompte.component'
+import { AjoutcompteComponent } from './ajoutcompte/ajoutcompte.component';
+import { EnvoieComponent } from './envoie/envoie.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AjoutcompteComponent } from './ajoutcompte/ajoutcompte.component'
     UtilisateursComponent,
     DepotComponent,
     ListedepotsComponent,
-    AjoutcompteComponent
+    AjoutcompteComponent,
+    EnvoieComponent
   ],
   imports: [
     BrowserModule,

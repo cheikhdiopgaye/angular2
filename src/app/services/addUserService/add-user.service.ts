@@ -20,7 +20,6 @@ export class AddUserService {
     formData.append('adresse', data.adresse);
     formData.append('telephone', data.telephone);
     formData.append('email', data.email);
-    formData.append('profil', data.profil);
     formData.append('imageFile', data.imageFile);
 
     return this.http.post(addUserUrl, formData, {headers:headers})

@@ -15,20 +15,20 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">ID Compte banquaire</th>
+              <th scope="col">Numéro compte</th>
+              <th scope="col">Solde</th>
               <th scope="col">Montant (FCFA)</th>
               <th scope="col">Date de dépôt</th>
-              <th scope="col">Plus de detail</th>
-              <th scope="col">Modifier</th>
+
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let dep of depots" >
-              <td>{{dep.comptb}}</td>
+              <td>{{dep.comptb.numeroCompte}}</td>
+              <td>{{dep.comptb.solde}}</td>
               <td>{{dep.montant}}</td>
               <td>{{dep.dateDepot}}</td>
-              <td><a href="" class="btn btn-info">Plus d'infos</a> </td>
-              <td><a href="" class="btn btn-success">Modifier</a> </td>
+
           </tr>
           </tbody>
         </table>

@@ -13,7 +13,6 @@ export class UtilisateurService {
     var headers= new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem('token'));
     const addUtilisateurUrl = "http://localhost:8000/api/adduser";
     const formData: FormData = new FormData();
-    formData.append('id_partenaire', data.partenaire);
     formData.append('username', data.username);
     formData.append('plainPassword', data.plainPassword);
     formData.append('nom', data.nom);
@@ -22,6 +21,8 @@ export class UtilisateurService {
     formData.append('telephone', data.telephone);
     formData.append('email', data.email);
     formData.append('imageFile', data.imageFile);
+    formData.append('numeroCompte', data.numeroCompte);
+    formData.append('profil', data.profil);
 
     return this.http.post(addUtilisateurUrl, formData, {headers:headers})
   }

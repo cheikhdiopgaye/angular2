@@ -13,6 +13,7 @@ export class UtilisateursComponent implements OnInit {
   addUtilisateurData = {imageFile :File=null};
   imageUrl:string ="/assets/imgch/hom.jpeg";
   fileToUpload : File= null;
+  profil= ['admin', 'user'];
   ngOnInit() {
   }
   handleFileInput(file: FileList){
@@ -22,14 +23,14 @@ export class UtilisateursComponent implements OnInit {
     reader.onload= (event: any) => {
       this.imageUrl = event.target.result;
     }
-    reader.readAsDataURL(this.addUtilisateurData.imageFile); 
+    reader.readAsDataURL(this.addUtilisateurData.imageFile);
   }
-  
+
   addUtilisateur(){
     this.utilisateurService.addUtilisateur(this.addUtilisateurData)
     .subscribe(
       res => console.log(res),
       err => console.log(err)
     )
-  } 
+  }
 }
